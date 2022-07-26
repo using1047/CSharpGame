@@ -168,5 +168,17 @@ namespace Game
                 rtb_log.Text += m.ToString() + "원을 주웠습니다.\n";
             }
         }
+
+        private void sAVEToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            string Save = "";
+            Save += money + "\n";
+            Save += str + "\n";
+            Save += agilty + "\n";
+            Save += brain + "\n";
+            Save += move + "\n";
+            Save += max_move + "\n";
+            System.IO.File.WriteAllText(@"C:\Users\rlaql\OneDrive\바탕 화면\save.txt", Save);
+        }
     }
 }

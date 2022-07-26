@@ -30,32 +30,37 @@ namespace Game
         private void InitializeComponent()
         {
             this.pn_left = new System.Windows.Forms.Panel();
-            this.pnl_top = new System.Windows.Forms.Panel();
+            this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_hunt = new System.Windows.Forms.Button();
+            this.btn_cook = new System.Windows.Forms.Button();
+            this.btn_quest = new System.Windows.Forms.Button();
+            this.btn_inventory = new System.Windows.Forms.Button();
             this.pnl_status = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_money = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lbl_move = new System.Windows.Forms.Label();
             this.lbl_brain = new System.Windows.Forms.Label();
             this.lbl_agilty = new System.Windows.Forms.Label();
             this.lbl_str = new System.Windows.Forms.Label();
             this.lbl_lucky = new System.Windows.Forms.Label();
-            this.pnl_menu = new System.Windows.Forms.Panel();
-            this.btn_inventory = new System.Windows.Forms.Button();
-            this.btn_quest = new System.Windows.Forms.Button();
-            this.btn_cook = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_top = new System.Windows.Forms.Panel();
             this.pnl_main = new System.Windows.Forms.Panel();
-            this.rtb_log = new System.Windows.Forms.RichTextBox();
             this.pnl_game = new System.Windows.Forms.Panel();
-            this.btn_hunt = new System.Windows.Forms.Button();
-            this.lbl_money = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.rtb_log = new System.Windows.Forms.RichTextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sAVEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAVEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pn_left.SuspendLayout();
-            this.pnl_status.SuspendLayout();
             this.pnl_menu.SuspendLayout();
+            this.pnl_status.SuspendLayout();
+            this.pnl_top.SuspendLayout();
             this.pnl_main.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_left
@@ -69,13 +74,61 @@ namespace Game
             this.pn_left.Size = new System.Drawing.Size(271, 503);
             this.pn_left.TabIndex = 2;
             // 
-            // pnl_top
+            // pnl_menu
             // 
-            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_top.Location = new System.Drawing.Point(0, 0);
-            this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(271, 93);
-            this.pnl_top.TabIndex = 0;
+            this.pnl_menu.Controls.Add(this.btn_hunt);
+            this.pnl_menu.Controls.Add(this.btn_cook);
+            this.pnl_menu.Controls.Add(this.btn_quest);
+            this.pnl_menu.Controls.Add(this.btn_inventory);
+            this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_menu.Location = new System.Drawing.Point(0, 277);
+            this.pnl_menu.Name = "pnl_menu";
+            this.pnl_menu.Size = new System.Drawing.Size(271, 223);
+            this.pnl_menu.TabIndex = 2;
+            // 
+            // btn_hunt
+            // 
+            this.btn_hunt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_hunt.Location = new System.Drawing.Point(0, 162);
+            this.btn_hunt.Name = "btn_hunt";
+            this.btn_hunt.Size = new System.Drawing.Size(271, 54);
+            this.btn_hunt.TabIndex = 3;
+            this.btn_hunt.Text = "사냥";
+            this.btn_hunt.UseVisualStyleBackColor = true;
+            this.btn_hunt.Click += new System.EventHandler(this.btn_hunt_Click);
+            // 
+            // btn_cook
+            // 
+            this.btn_cook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_cook.Location = new System.Drawing.Point(0, 108);
+            this.btn_cook.Name = "btn_cook";
+            this.btn_cook.Size = new System.Drawing.Size(271, 54);
+            this.btn_cook.TabIndex = 2;
+            this.btn_cook.Text = "요리";
+            this.btn_cook.UseVisualStyleBackColor = true;
+            this.btn_cook.Click += new System.EventHandler(this.btn_cook_Click);
+            // 
+            // btn_quest
+            // 
+            this.btn_quest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_quest.Location = new System.Drawing.Point(0, 54);
+            this.btn_quest.Name = "btn_quest";
+            this.btn_quest.Size = new System.Drawing.Size(271, 54);
+            this.btn_quest.TabIndex = 1;
+            this.btn_quest.Text = "퀘스트";
+            this.btn_quest.UseVisualStyleBackColor = true;
+            this.btn_quest.Click += new System.EventHandler(this.btn_quest_Click);
+            // 
+            // btn_inventory
+            // 
+            this.btn_inventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_inventory.Location = new System.Drawing.Point(0, 0);
+            this.btn_inventory.Name = "btn_inventory";
+            this.btn_inventory.Size = new System.Drawing.Size(271, 54);
+            this.btn_inventory.TabIndex = 0;
+            this.btn_inventory.Text = "인벤토리";
+            this.btn_inventory.UseVisualStyleBackColor = true;
+            this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
             // 
             // pnl_status
             // 
@@ -97,50 +150,23 @@ namespace Game
             this.pnl_status.Size = new System.Drawing.Size(271, 184);
             this.pnl_status.TabIndex = 1;
             // 
-            // label1
+            // lbl_money
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "행운";
+            this.lbl_money.AutoSize = true;
+            this.lbl_money.Location = new System.Drawing.Point(69, 89);
+            this.lbl_money.Name = "lbl_money";
+            this.lbl_money.Size = new System.Drawing.Size(15, 15);
+            this.lbl_money.TabIndex = 11;
+            this.lbl_money.Text = "0";
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "힘";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "민첩";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "지능";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "활동력";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(22, 15);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "돈";
             // 
             // lbl_move
             // 
@@ -187,50 +213,59 @@ namespace Game
             this.lbl_lucky.TabIndex = 5;
             this.lbl_lucky.Text = "0";
             // 
-            // pnl_menu
+            // label5
             // 
-            this.pnl_menu.Controls.Add(this.btn_hunt);
-            this.pnl_menu.Controls.Add(this.btn_cook);
-            this.pnl_menu.Controls.Add(this.btn_quest);
-            this.pnl_menu.Controls.Add(this.btn_inventory);
-            this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_menu.Location = new System.Drawing.Point(0, 277);
-            this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(271, 223);
-            this.pnl_menu.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "활동력";
             // 
-            // btn_inventory
+            // label4
             // 
-            this.btn_inventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_inventory.Location = new System.Drawing.Point(0, 0);
-            this.btn_inventory.Name = "btn_inventory";
-            this.btn_inventory.Size = new System.Drawing.Size(271, 54);
-            this.btn_inventory.TabIndex = 0;
-            this.btn_inventory.Text = "인벤토리";
-            this.btn_inventory.UseVisualStyleBackColor = true;
-            this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "지능";
             // 
-            // btn_quest
+            // label3
             // 
-            this.btn_quest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_quest.Location = new System.Drawing.Point(0, 54);
-            this.btn_quest.Name = "btn_quest";
-            this.btn_quest.Size = new System.Drawing.Size(271, 54);
-            this.btn_quest.TabIndex = 1;
-            this.btn_quest.Text = "퀘스트";
-            this.btn_quest.UseVisualStyleBackColor = true;
-            this.btn_quest.Click += new System.EventHandler(this.btn_quest_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "민첩";
             // 
-            // btn_cook
+            // label2
             // 
-            this.btn_cook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_cook.Location = new System.Drawing.Point(0, 108);
-            this.btn_cook.Name = "btn_cook";
-            this.btn_cook.Size = new System.Drawing.Size(271, 54);
-            this.btn_cook.TabIndex = 2;
-            this.btn_cook.Text = "요리";
-            this.btn_cook.UseVisualStyleBackColor = true;
-            this.btn_cook.Click += new System.EventHandler(this.btn_cook_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "힘";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "행운";
+            // 
+            // pnl_top
+            // 
+            this.pnl_top.Controls.Add(this.menuStrip1);
+            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_top.Location = new System.Drawing.Point(0, 0);
+            this.pnl_top.Name = "pnl_top";
+            this.pnl_top.Size = new System.Drawing.Size(271, 93);
+            this.pnl_top.TabIndex = 0;
             // 
             // pnl_main
             // 
@@ -242,6 +277,14 @@ namespace Game
             this.pnl_main.Size = new System.Drawing.Size(511, 503);
             this.pnl_main.TabIndex = 3;
             // 
+            // pnl_game
+            // 
+            this.pnl_game.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_game.Location = new System.Drawing.Point(0, 0);
+            this.pnl_game.Name = "pnl_game";
+            this.pnl_game.Size = new System.Drawing.Size(511, 356);
+            this.pnl_game.TabIndex = 1;
+            // 
             // rtb_log
             // 
             this.rtb_log.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -251,42 +294,31 @@ namespace Game
             this.rtb_log.TabIndex = 0;
             this.rtb_log.Text = "";
             // 
-            // pnl_game
+            // menuStrip1
             // 
-            this.pnl_game.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_game.Location = new System.Drawing.Point(0, 0);
-            this.pnl_game.Name = "pnl_game";
-            this.pnl_game.Size = new System.Drawing.Size(511, 356);
-            this.pnl_game.TabIndex = 1;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sAVEToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(271, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btn_hunt
+            // sAVEToolStripMenuItem
             // 
-            this.btn_hunt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_hunt.Location = new System.Drawing.Point(0, 162);
-            this.btn_hunt.Name = "btn_hunt";
-            this.btn_hunt.Size = new System.Drawing.Size(271, 54);
-            this.btn_hunt.TabIndex = 3;
-            this.btn_hunt.Text = "사냥";
-            this.btn_hunt.UseVisualStyleBackColor = true;
-            this.btn_hunt.Click += new System.EventHandler(this.btn_hunt_Click);
+            this.sAVEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sAVEToolStripMenuItem1});
+            this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.sAVEToolStripMenuItem.Text = "Menu";
             // 
-            // lbl_money
+            // sAVEToolStripMenuItem1
             // 
-            this.lbl_money.AutoSize = true;
-            this.lbl_money.Location = new System.Drawing.Point(69, 89);
-            this.lbl_money.Name = "lbl_money";
-            this.lbl_money.Size = new System.Drawing.Size(15, 15);
-            this.lbl_money.TabIndex = 11;
-            this.lbl_money.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 15);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "돈";
+            this.sAVEToolStripMenuItem1.Name = "sAVEToolStripMenuItem1";
+            this.sAVEToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sAVEToolStripMenuItem1.Text = "SAVE";
+            this.sAVEToolStripMenuItem1.Click += new System.EventHandler(this.sAVEToolStripMenuItem1_Click);
             // 
             // GameMain
             // 
@@ -295,16 +327,21 @@ namespace Game
             this.ClientSize = new System.Drawing.Size(782, 503);
             this.Controls.Add(this.pnl_main);
             this.Controls.Add(this.pn_left);
+            this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 550);
             this.Name = "GameMain";
             this.Text = "GameMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameMain_FormClosing);
             this.Load += new System.EventHandler(this.GameMain_Load);
             this.pn_left.ResumeLayout(false);
+            this.pnl_menu.ResumeLayout(false);
             this.pnl_status.ResumeLayout(false);
             this.pnl_status.PerformLayout();
-            this.pnl_menu.ResumeLayout(false);
+            this.pnl_top.ResumeLayout(false);
+            this.pnl_top.PerformLayout();
             this.pnl_main.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +371,8 @@ namespace Game
         private System.Windows.Forms.Button btn_hunt;
         private System.Windows.Forms.Label lbl_money;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sAVEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sAVEToolStripMenuItem1;
     }
 }
