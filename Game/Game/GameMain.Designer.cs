@@ -49,18 +49,19 @@ namespace Game
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.pnl_main = new System.Windows.Forms.Panel();
-            this.pnl_game = new System.Windows.Forms.Panel();
-            this.rtb_log = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sAVEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAVEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnl_main = new System.Windows.Forms.Panel();
+            this.pnl_game = new System.Windows.Forms.Panel();
+            this.rtb_log = new System.Windows.Forms.RichTextBox();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pn_left.SuspendLayout();
             this.pnl_menu.SuspendLayout();
             this.pnl_status.SuspendLayout();
             this.pnl_top.SuspendLayout();
-            this.pnl_main.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.pnl_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_left
@@ -267,6 +268,33 @@ namespace Game
             this.pnl_top.Size = new System.Drawing.Size(271, 93);
             this.pnl_top.TabIndex = 0;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sAVEToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(271, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sAVEToolStripMenuItem
+            // 
+            this.sAVEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sAVEToolStripMenuItem1,
+            this.loadToolStripMenuItem});
+            this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.sAVEToolStripMenuItem.Text = "Menu";
+            // 
+            // sAVEToolStripMenuItem1
+            // 
+            this.sAVEToolStripMenuItem1.Name = "sAVEToolStripMenuItem1";
+            this.sAVEToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sAVEToolStripMenuItem1.Text = "SAVE";
+            this.sAVEToolStripMenuItem1.Click += new System.EventHandler(this.sAVEToolStripMenuItem1_Click);
+            // 
             // pnl_main
             // 
             this.pnl_main.Controls.Add(this.pnl_game);
@@ -294,31 +322,12 @@ namespace Game
             this.rtb_log.TabIndex = 0;
             this.rtb_log.Text = "";
             // 
-            // menuStrip1
+            // loadToolStripMenuItem
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sAVEToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(271, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sAVEToolStripMenuItem
-            // 
-            this.sAVEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sAVEToolStripMenuItem1});
-            this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.sAVEToolStripMenuItem.Text = "Menu";
-            // 
-            // sAVEToolStripMenuItem1
-            // 
-            this.sAVEToolStripMenuItem1.Name = "sAVEToolStripMenuItem1";
-            this.sAVEToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.sAVEToolStripMenuItem1.Text = "SAVE";
-            this.sAVEToolStripMenuItem1.Click += new System.EventHandler(this.sAVEToolStripMenuItem1_Click);
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // GameMain
             // 
@@ -339,9 +348,9 @@ namespace Game
             this.pnl_status.PerformLayout();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            this.pnl_main.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnl_main.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -374,5 +383,6 @@ namespace Game
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sAVEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }

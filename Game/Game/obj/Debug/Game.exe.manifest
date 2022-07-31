@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game.exe" size="26624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game.exe" size="27136">
       <assemblyIdentity name="Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q8JZZv2jye+zssQWVaWXmk1iq4X337S7lQjIn/WPA+U=</dsig:DigestValue>
+        <dsig:DigestValue>Tk72kaM5pGmRwTGh7BFoMVBxdOx04xDcHFpTR57lDhU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

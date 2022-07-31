@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -163,7 +164,7 @@ namespace Game
                 move = move - movepoint;
                 rtb_log.Text += MonsterName + "을 사냥했습니다.\n";
                 Random random = new Random();
-                int m = random.Next(0, 100);
+                int m = random.Next(0, 100 * movepoint);
                 money += m;
                 rtb_log.Text += m.ToString() + "원을 주웠습니다.\n";
             }
@@ -172,13 +173,31 @@ namespace Game
         private void sAVEToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string Save = "";
-            Save += money + "\n";
-            Save += str + "\n";
-            Save += agilty + "\n";
-            Save += brain + "\n";
-            Save += move + "\n";
-            Save += max_move + "\n";
+            Save += money + " ";
+            Save += str + " ";
+            Save += agilty + " ";
+            Save += brain + " ";
+            Save += move + " ";
+            Save += max_move + " ";
             System.IO.File.WriteAllText(@"C:\Users\rlaql\OneDrive\바탕 화면\save.txt", Save);
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                string read = System.IO.File.ReadAllText(ofd.FileName);
+                money = int.Parse(read.Split(' ')[0]);
+                str = int.Parse(read.Split(' ')[1]);
+                agilty = int.Parse(read.Split(' ')[2]);
+                brain = int.Parse(read.Split(' ')[3]);
+                move = int.Parse(read.Split(' ')[4]);
+                max_move = int.Parse(read.Split(' ')[5]);
+                rtb_log.Text += "Load 완료\n";
+                StatusUpdate();
+            }
         }
     }
 }
